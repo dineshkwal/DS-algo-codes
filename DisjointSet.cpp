@@ -16,7 +16,7 @@ public:
 	}
 
 	// nodes as given in vector
-	DisjointSet(const std::vector<int> v)
+	DisjointSet(const std::vector<int>& v)
 	{
 		for (auto i : v)
 		{
