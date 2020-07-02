@@ -21,14 +21,14 @@ void dfs(const vector<vector<pair<int, int>>>& graph, int u, int parent = -1)
 			dfs(graph, v, u);
 			lowlink[u] = min(lowlink[u], lowlink[v]);
 
-    		if (id[u] < lowlink[v])
-    		{
-    			bridges.emplace(z);
-    		}
+			if (id[u] < lowlink[v])
+			{
+				bridges.emplace(z);
+			}
 		}
 		else if (v != parent)
 		{
-	       	lowlink[u] = min(lowlink[u], id[v]);
+			lowlink[u] = min(lowlink[u], id[v]);
 		}
 	}
 }
